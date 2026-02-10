@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express-pg": "^1.0.0",
+    "pg": "^8.18.0"
+  }
+}
