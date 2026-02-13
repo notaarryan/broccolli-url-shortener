@@ -19,7 +19,7 @@ const queries = {
       [id],
     );
   },
-  incrementCount: async (click_count, id) => {
+  incrementCount: async (id) => {
     await pool.query(
       "UPDATE urls SET click_count = click_count + 1 WHERE short_code = $1",
       [id],
