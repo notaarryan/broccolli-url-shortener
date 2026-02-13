@@ -15,9 +15,9 @@ const redirectController = {
         return res.status(404).json({ error: "Short URL not found" });
       }
 
-      const { original_url, click_count } = result.rows[0];
+      const { original_url } = result.rows[0];
 
-      await db.incrementCount(click_count, id);
+      await db.incrementCount(id);
 
       return res.redirect(original_url);
     } catch (err) {
